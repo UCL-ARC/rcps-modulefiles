@@ -1,0 +1,45 @@
+#%Module -*- tcl -*-
+#
+# PyTorch 2.1.0 CPU CUDA version
+#
+# C.D.K. Harris Jan 2025
+# Updated Jan 2025 for version 2.1.0 and Python 3.9.10
+
+proc ModulesHelp { } {
+
+    puts stderr "This module adds the PyTorch 2.1.0 package to your environment."
+    puts stderr ""
+    puts stderr "This includes pillow - add the pillow-simd module after this fo greater performance."
+
+}
+
+module-whatis "Adds PyTorch 2.1.0 to your environment."
+
+prereq gcc-libs/10.2.0
+prereq python/3.9.6-gnu-10.2.0
+prereq cuda/11.8.0/gnu-10.2.0
+prereq cudnn/9.2.0.82/cuda-11
+
+conflict pytorch
+
+if { [ file type /shared/ucl/apps ] == "link" } {
+   set           baselink          [ file readlink /shared/ucl/apps ]
+   set           base              $baselink/pytorch/2.1.0/python3.9.10/cuda
+} else {
+   set           base              /shared/ucl/apps/pytorch/2.1.0/python3.9.10/cuda
+}
+set              root              $base
+
+prepend-path     LD_RUN_PATH       $root/lib
+prepend-path     LD_LIBRARY_PATH   $root/lib
+
+prepend-path     PATH              $root/bin
+prepend-path     PYTHONPATH        $root/lib/python3.9/site-packages
+
+prepend-path     LD_RUN_PATH       $root/lib64
+prepend-path     LD_LIBRARY_PATH   $root/lib64
+
+prepend-path     CPATH             $root/include
+prepend-path     INCLUDE_PATH      $root/include
+
+prepend-path CMAKE_PREFIX_PATH $root

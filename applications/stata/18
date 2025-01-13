@@ -44,7 +44,7 @@ prepend-path PATH               $prefix
 
 if {! [modulefunctions::isCluster Myriad]  } {
     puts stderr ""
-    puts stderr "**** error: STATA 18.5 is only available on Myriad."
+    puts stderr ""
     puts stderr ""
 } else {
     prepend-path PATH           $prefix

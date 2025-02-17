@@ -5,8 +5,8 @@ proc ModulesHelp { } {
 }
 module-whatis {Adds the test-stack/2025-02 module space to module avail. This is under development and liable to change. Please report any issues to rc-support.}
 
-module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/applications/linux-rhel7-cascadelake
-module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/libraries/linux-rhel7-cascadelake
-module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/compilers/linux-rhel7-cascadelake
 module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/mpi/linux-rhel7-cascadelake
+module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/compilers/linux-rhel7-cascadelake
+module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/libraries/linux-rhel7-cascadelake
+module use /shared/ucl/apps/spack/0.23/deploy/2025-02/modules/applications/linux-rhel7-cascadelake
 

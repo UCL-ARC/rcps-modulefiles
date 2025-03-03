@@ -46,7 +46,7 @@ prereq mpi/intel
 
 set prefix /shared/ucl/apps/ABAQUS/2017-Intel
 
-modulefunctions::mustBeMemberToLoad "legabq"
+modulefunctions::mustBeMemberToLoad "ag-archpc-abaqus"
 
 # Set location of Mech Eng licence manager
 prepend-path LM_LICENSE_FILE   27000@128.40.55.199

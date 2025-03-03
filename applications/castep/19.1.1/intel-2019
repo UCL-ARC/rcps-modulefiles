@@ -9,7 +9,7 @@ module-whatis {CASTEP is a program that uses density functional theory to calcul
 lappend auto_path /shared/ucl/apps/modulelibs/UsefulModuleFunctions
 package require modulefunctions 1.0
 
-modulefunctions::mustBeMemberToLoad lgcastep
+modulefunctions::mustBeMemberToLoad ag-archpc-castep
 conflict castep
 prereq gcc-libs
 prereq compilers/intel/2019/update4

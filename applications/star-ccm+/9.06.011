@@ -69,7 +69,7 @@ prereq mpi/openmpi/1.8.4/intel-2015-update2
 
 set prefix /shared/ucl/apps/STAR-CCM+/9.06.011
 
-modulefunctions::mustBeMemberToLoad legstarc
+modulefunctions::mustBeMemberToLoad ag-archpc-starcd
 
 # Set location of Mech Eng licence manager
 setenv CDLMD_LICENSE_FILE 1999@mech-lic1.meng.ucl.ac.uk

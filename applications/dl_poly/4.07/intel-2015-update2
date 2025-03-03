@@ -15,7 +15,7 @@ proc ModulesHelp { } {
 
 module-whatis "Adds DL_POLY 4.07 to your environment"
 
-modulefunctions::mustBeMemberToLoad "lgdlp407"
+modulefunctions::mustBeMemberToLoad "ag-archpc-dlpoly407"
 
 # Add DL_Poly binary to PATH
 prereq gcc-libs

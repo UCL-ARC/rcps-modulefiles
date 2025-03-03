@@ -31,11 +31,10 @@ conflict comsol
 
 # on load, check if user is in the correct group and create .comsol in Scratch 
 # with a symlink from home if it does not already exist.
-# Will need to setup a different group as legcomsl is for the EE version!
 
 if [modulefunctions::isModuleLoad] {
     # This function performs its own check on loading mode but it's fine
-    modulefunctions::mustBeMember "lgcomsol"     
+    modulefunctions::mustBeMember "ag-archpc-comsol-chemeng"     
 
     set comsoldir "~/Scratch/.comsol"   
     modulefunctions::createDir $comsoldir

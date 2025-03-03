@@ -2,7 +2,7 @@
 #
 # FHI-aims Release 210716_3
 #
-# For Imperial College Wolpert Group on Young - lgfhaimw
+# For Imperial College Wolpert Group on Young - ag-archpc-fhiaims
 #
 # June 2022
 
@@ -29,7 +29,7 @@ prereq gcc-libs
 prereq mpi/intel/2018/update3/intel
 
 # Check user is in the IC Wolpert group Unix group.
-modulefunctions::mustBeMemberToLoad "lgfhaimw"
+modulefunctions::mustBeMemberToLoad "ag-archpc-fhiaims"
 
 set          prefix	/shared/ucl/apps/FHI-aims/ic-wg/210716_3/intel-2018/fhi-aims.210716_3
 

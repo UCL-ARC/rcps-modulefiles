@@ -14,7 +14,7 @@ prereq gcc-libs
 set version 2021.1-436004
 set prefix /shared/ucl/apps/STAR-CD/$version
 
-modulefunctions::mustBeMemberToLoad "lgstabru"
+modulefunctions::mustBeMemberToLoad "ag-archpc-starcd-brunel"
 
 # Check if TMPDIR exists - if not, try $XDG_RUNTIME_DIR (/run/user/$uid)
 # systemd will wipe these files when no active sessions remain.

@@ -72,7 +72,7 @@ module-whatis "Adds Ansys CFX/Fluent, EM etc to your environment"
 conflict ansys
 
 # Check user is in the Brunel ANSYS group.
-modulefunctions::mustBeMemberToLoad "lgansbru"
+modulefunctions::mustBeMemberToLoad "ag-archpc-ansys-brunel"
 
 # For ANSYS Electromagnetics products
 prereq   giflib/5.1.1

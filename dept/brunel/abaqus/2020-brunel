@@ -18,7 +18,7 @@ proc ModulesHelp { } {
   puts stderr ""
   puts stderr "Abaqus is a reserved applications. This version is"
   puts stderr "licensed by Brunel University London. Access"
-  puts stderr "is controlled by membership of the lgabqbru group."
+  puts stderr "is controlled by membership of the ag-archpc-abaqus-brunel group."
   puts stderr "To be given access to these applications please"
   puts stderr "email rc-support@ucl.ac.uk - Note: you will need"
   puts stderr "authorisation from Brunel."
@@ -38,7 +38,7 @@ prereq gcc-libs
 
 set prefix /shared/ucl/apps/ABAQUS/2020
 
-modulefunctions::mustBeMemberToLoad "lgabqbru"
+modulefunctions::mustBeMemberToLoad "ag-archpc-abaqus-brunel"
 
 # Set location of Brunel licence manager
 prepend-path LM_LICENSE_FILE   27002@134.83.82.151

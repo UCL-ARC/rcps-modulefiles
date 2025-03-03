@@ -28,7 +28,7 @@ prereq gcc-libs
 set version	4.26.022
 set prefix      /shared/ucl/apps/STAR-CD/$version
 
-modulefunctions::mustBeMemberToLoad "legstarc"
+modulefunctions::mustBeMemberToLoad "ag-archpc-starcd"
 
 # Check if TMPDIR exists - if not, try $XDG_RUNTIME_DIR (/run/user/$uid)
 # systemd will wipe these files when no active sessions remain.

@@ -4,7 +4,7 @@
 #
 #                                                      H.K. 11th May 2015
 
-# Updated to work with both legg09 and legg03 installs depending on group
+# Updated to work with both leg-g09 and leg-g03 installs depending on group
 # user is in                                           March 2017 BAA
 
 lappend auto_path /shared/ucl/apps/modulelibs/UsefulModuleFunctions
@@ -27,9 +27,9 @@ conflict gaussian
 # Check if user is in Gaussian group
 set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7
 
-if [modulefunctions::isMember legg09] {
+if [modulefunctions::isMember ag-archpc-gaussian09] {
     set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7
-} elseif [modulefunctions::isMember legg03] {
+} elseif [modulefunctions::isMember ag-archpc-gaussian03] {
     set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7_2
 } elseif [modulefunctions::isModuleLoad]  {
     puts stderr ""

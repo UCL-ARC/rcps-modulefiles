@@ -3,7 +3,6 @@
 # Gaussian G09-C01 with Linda and Gaussview 5
 #
 #                                                      BAA 11th December 2015
-# Uopdated: May 2017 for legg03 group.
 
 lappend auto_path /shared/ucl/apps/modulelibs/UsefulModuleFunctions
 package require modulefunctions 1.0
@@ -31,7 +30,7 @@ prereq gcc-libs
 conflict gaussian
 
 # Check if user is in Gaussian group (using g03 group for old versions of g09)
-modulefunctions::mustBeMemberToLoad "legg03"
+modulefunctions::mustBeMemberToLoad "ag-archpc-gaussian03"
 
 set mainExe g09
 if {[modulefunctions::isModuleLoad] && [modulefunctions::nodeIsLoginNode]} {

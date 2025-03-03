@@ -17,7 +17,7 @@ proc ModulesHelp { } {
 module-whatis "Adds DL_POLY 4.10.0 to your environment. DL_POLY is a general purpose classical molecular dynamics (MD) simulation software."
 
 # on load, check if user is in the correct group
-modulefunctions::mustBeMemberToLoad "lgdlp410"
+modulefunctions::mustBeMemberToLoad "ag-archpc-dlpoly410"
 
 # Add DL_Poly binary to PATH
 prereq gcc-libs

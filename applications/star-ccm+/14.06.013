@@ -28,7 +28,7 @@ proc ModulesHelp { } {
     puts stderr "transfer and stress. This is the latest version (Jan 2020)."
     puts stderr ""
     puts stderr "STAR-CCM+ and STAR-View are reserved applications. Access is"
-    puts stderr "controlled by membership of the legstarc group. To be given"
+    puts stderr "controlled by membership of the ag-archpc-starcd group. To be given"
     puts stderr "access to these applications please email rc-support@ucl.ac.uk"
     puts stderr "All requests will need to authorised by the Mechanical"
     puts stderr "Engineering Department who own the license."
@@ -77,7 +77,7 @@ prereq gcc-libs
 
 set prefix /shared/ucl/apps/STAR-CCM+/14.06.013-R8
 
-modulefunctions::mustBeMemberToLoad "legstarc"
+modulefunctions::mustBeMemberToLoad "ag-archpc-starcd"
 
 # Set location of Mech Eng licence manager
 setenv CDLMD_LICENSE_FILE 1999@mech-lic1.meng.ucl.ac.uk

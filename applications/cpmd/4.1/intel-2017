@@ -47,6 +47,6 @@ prereq mpi/intel
 
 set prefix /shared/ucl/apps/CPMD/4.1/Intel-MPI
 
-modulefunctions::mustBeMemberToLoad "legcpmd"
+modulefunctions::mustBeMemberToLoad "ag-archpc-cpmd"
 
 prepend-path PATH		$prefix/bin

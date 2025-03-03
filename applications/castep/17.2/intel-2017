@@ -14,7 +14,7 @@ proc ModulesHelp { } {
 
 module-whatis {Adds castep 17.2 to your environment. CASTEP is a program that uses density functional theory to calculate the properties of materials from first principles.}
 
-modulefunctions::mustBeMemberToLoad lgcastep
+modulefunctions::mustBeMemberToLoad ag-archpc-castep
 
 prereq gcc-libs
 prereq compilers/intel

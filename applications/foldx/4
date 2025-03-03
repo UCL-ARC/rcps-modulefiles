@@ -31,7 +31,7 @@ module-whatis "Adds FoldX Suite 4.0 to your environment."
 
 set prefix /shared/ucl/apps/FoldX/v4.0
 
-modulefunctions::mustBeMemberToLoad "legfldx"
+modulefunctions::mustBeMemberToLoad "ag-archpc-foldx"
 
 prereq gcc-libs
 conflict foldx

@@ -21,7 +21,7 @@ prereq gcc-libs
 prereq compilers/intel
 prereq tcl
 
-modulefunctions::mustBeMemberToLoad "lgchemsh"
+modulefunctions::mustBeMemberToLoad "ag-archpc-chemshell"
 
 set          prefix            /shared/ucl/apps/chemshell/3.7.1/intel-2018/chemsh-3.7.1
 

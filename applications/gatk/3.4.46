@@ -29,7 +29,7 @@ conflict gatk
 prereq gcc-libs
 #prereq java/1.8.0_45 		not presently compatible with java 1.8
 
-modulefunctions::mustBeMemberToLoad leggatk
+modulefunctions::mustBeMemberToLoad ag-archpc-gatk3
 
 set prefix /shared/ucl/apps/gatk/3.4-46
 

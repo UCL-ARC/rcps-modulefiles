@@ -29,8 +29,8 @@ prereq gcc-libs
 
 conflict gaussian
 
-# Check if user is in Gaussian group (using g03 group for old versions of g09)
-modulefunctions::mustBeMemberToLoad "ag-archpc-gaussian03"
+# Check if user is in Gaussian group
+modulefunctions::mustBeMemberToLoad "ag-archpc-gaussian09"
 
 set mainExe g09
 if {[modulefunctions::isModuleLoad] && [modulefunctions::nodeIsLoginNode]} {

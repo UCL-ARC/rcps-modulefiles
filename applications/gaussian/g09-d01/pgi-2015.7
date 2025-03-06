@@ -4,9 +4,6 @@
 #
 #                                                      H.K. 11th May 2015
 
-# Updated to work with both legg09 and legg03 installs depending on group
-# user is in                                           March 2017 BAA
-
 lappend auto_path /shared/ucl/apps/modulelibs/UsefulModuleFunctions
 package require modulefunctions 1.0
 
@@ -24,25 +21,10 @@ prereq gcc-libs
 
 conflict gaussian
 
-# Check if user is in Gaussian group
 set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7
 
-if [modulefunctions::isMember ag-archpc-gaussian09] {
-    set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7
-} elseif [modulefunctions::isMember ag-archpc-gaussian03] {
-    set root /shared/ucl/apps/gaussian/g09-d01/pgi-2015.7_2
-} elseif [modulefunctions::isModuleLoad]  {
-    puts stderr ""
-    puts stderr "You are not currently a member of the reserved application group"
-    puts stderr "for this module. Please email"
-    puts stderr ""
-    puts stderr "    rc-support@ucl.ac.uk"
-    puts stderr ""
-    puts stderr "requesting access to the software."
-    puts stderr ""
-    puts stderr "=================================="
-    puts stderr ""
-}
+# Check if user is in Gaussian group
+modulefunctions::mustBeMemberToLoad "ag-archpc-gaussian09"
 
 set mainExe g09
 if {[modulefunctions::isModuleLoad] && [modulefunctions::nodeIsLoginNode]} {

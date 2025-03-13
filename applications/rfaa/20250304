@@ -3,7 +3,7 @@ proc ModulesHelp { } {
   puts stderr "Installation of RoseTTAFold All-Atom (RFAA)"
   puts stderr "Please see the instructions at: "
   puts stderr "https://www.rc.ucl.ac.uk/docs/Software_Guides/RFAA/"
-  puts stderr "\nPlease especially note that the license of Signalp 6.0h which is used"
+  puts stderr "\nPlease especially note that the license of SignalP 6.0h which is used"
   puts stderr "in RFAA ONLY allows its use for non-commercial work."
   puts stderr "This means you may only use RFAA for non-commercial work.\n"
 
@@ -11,7 +11,7 @@ proc ModulesHelp { } {
 
 module-whatis "Installation of RoseTTAFold All-Atom (RFAA"
 
-puts stderr "\nPlease note that the license of Signalp 6.0h which is used"
+puts stderr "\nPlease note that the license of SignalP 6.0h which is used"
 puts stderr "in RFAA ONLY allows its use for non-commercial work."
 puts stderr "This means you may only use RFAA for non-commercial work.\n"
 

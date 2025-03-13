@@ -1,0 +1,35 @@
+#%Module -*- tcl -*-
+proc ModulesHelp { } {
+  puts stderr "Installation of RoseTTAFold All-Atom (RFAA)"
+  puts stderr "Please see the instructions at: "
+  puts stderr "https://www.rc.ucl.ac.uk/docs/Software_Guides/AlphaFold3/"
+  puts stderr "\nPlease especially note that the license of Signalp 6.0h which is used"
+  puts stderr "in RFAA ONLY allows its use for non-commercial work."
+  puts stderr "This means you may only use RFAA for non-commercial work.\n"
+
+}
+
+module-whatis "Installation of RoseTTAFold All-Atom (RFAA"
+
+puts stderr "\nPlease note that the license of Signalp 6.0h which is used"
+puts stderr "in RFAA ONLY allows its use for non-commercial work."
+puts stderr "This means you may only use RFAA for non-commercial work.\n"
+
+prereq gcc-libs
+conflict python 
+conflict python3
+conflict python2
+conflict conda 
+conflict mamba 
+conflict miniconda
+conflict miniforge3
+conflict micromamba
+
+set install_prefix /shared/ucl/apps/rfaa/20250304/RoseTTAFold-All-Atom
+set mamba_prefix /shared/ucl/apps/rfaa/20250304/miniforge3/envs/RFAA
+
+prepend-path PATH ${install_prefix}
+prepend-path PATH ${install_prefix}/input_prep
+prepend-path PATH ${mamba_prefix}/bin
+setenv CONDA_PREFIX ${mamba_prefix}
+prepend-path PYTHONPATH ${install_prefix}

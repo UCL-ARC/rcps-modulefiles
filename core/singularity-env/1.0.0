@@ -32,6 +32,6 @@ setenv SINGULARITY_TMPDIR         "$prefix/tmp"
 setenv SINGULARITY_LOCALCACHEDIR  "$prefix/localcache"
 setenv SINGULARITY_PULLFOLDER     "$prefix/pull"
 
-prepend-path --delim=, SINGULARITY_BINDPATH "/scratch/scratch/$::env(USER)"
+prepend-path --delim=, SINGULARITY_BINDPATH "/home/$::env(USER)/Scratch"
 prepend-path --delim=, SINGULARITY_BINDPATH "/tmpdir"
 

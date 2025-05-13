@@ -111,7 +111,7 @@ prepend-path PATH       $subprefix/autodyn/bin/linx64
 prepend-path LM_LICENSE_FILE	1115@broonzy.brunel.ac.uk
 
 setenv ANSYS_ROOT      	$prefix
-setenv ANSYS[set vers]_DIR	$subprefix/ansys
+setenv ANSYS[set vtag]_DIR	$subprefix/ansys
 setenv ANSYSLIC_DIR     $prefix/shared_files/licensing
 # I'm not sure what to set this to now the LM has been updated and using the new ANSYS product
 # names Will leave it unset - the correct name will be ANSYS231_PRODUCT

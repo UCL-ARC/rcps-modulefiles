@@ -14,4 +14,4 @@ proc ModulesHelp { } {
 
 module-whatis "Adds Economics Department modules to your environment."
 
-module           use --append /shared/ucl/depts/economics/modulefiles
+module           use --append /shared/ucl/apps/modulefiles/dept/economics

@@ -1,0 +1,32 @@
+#%Module -*- tcl -*-
+##
+## dot modulefile
+##
+## TotalView Debugger - for Economics Dept use only
+##
+## April 2020 for version 2019.2.18
+##
+
+proc ModulesHelp { } {
+    puts stderr "Adds the TotalView Debugger Version 2019.2.18 to your environment."
+    puts stderr ""
+    puts stderr "Only to be used by Economics Department users."
+    puts stderr ""
+    puts stderr "Directory: /shared/ucl/apps/TotalView/2019.2.18/"
+}
+
+module-whatis "Adds the TotalView Debugger Version 2019.2.18 to your environment."
+
+# Location of TotalView:
+
+set prefix /shared/ucl/apps/TotalView
+set ver    2019.2.18
+
+prereq gcc-libs
+conflict totalview
+
+prepend-path PATH               $prefix/$ver/toolworks/totalview.$ver/bin
+setenv       FLEXLM             $prefix/$ver/toolworks/flexlm-11.13.1-1
+prepend-path LM_LICENSE_FILE    $prefix/$ver/toolworks/flexlm-11.13.1-1/license.dat
+prepend-path MANPATH            $prefix/$ver/toolworks/totalview.$ver/man
+

@@ -1,0 +1,20 @@
+#%Module -*- tcl -*-
+## module_made (v2)
+proc ModulesHelp { } {
+  puts stderr {The TauP Toolkit is a seismic travel time calculator. In addition to travel times, it can calculate derivative information such as ray paths through the earth, pierce and turning points. It handles many types of velocity models and can calculate times for virtually any seismic phase with a phase parser.}
+}
+module-whatis {The TauP Toolkit is a seismic travel time calculator. In addition to travel times, it can calculate derivative information such as ray paths through the earth, pierce and turning points. It handles many types of velocity models and can calculate times for virtually any seismic phase with a phase parser.}
+
+conflict taup
+prereq java/temurin-11
+
+set prefix /shared/ucl/apps/taup/3.0.1
+
+setenv TAUP_HOME /shared/ucl/apps/taup/3.0.1
+
+prepend-path CMAKE_PREFIX_PATH $prefix
+prepend-path PATH $prefix/bin
+prepend-path LIBRARY_PATH $prefix/lib
+prepend-path LD_RUN_PATH $prefix/lib
+prepend-path LD_LIBRARY_PATH $prefix/lib
+

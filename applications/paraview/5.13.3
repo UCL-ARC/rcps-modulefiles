@@ -1,0 +1,26 @@
+#%Module -*- tcl -*-
+## module_made (v2)
+proc ModulesHelp { } {
+  puts stderr {This module adds the headless ParaView 5.13.3 binaries to your environment. ParaView is an open-source, multi-platform data analysis and visualization application.}
+}
+module-whatis {This module adds the headless ParaView 5.13.3 binaries to your environment. ParaView is an open-source, multi-platform data analysis and visualization application.}
+
+prereq llvm/3.9.1
+prereq mesa/13.0.6/gnu-4.9.2
+prereq xorg-utils
+
+conflict paraview
+
+set prefix /shared/ucl/apps/paraview/5.13.3/ParaView-5.13.3-osmesa-MPI-Linux-Python3.10-x86_64
+
+prepend-path PATH $prefix/bin
+prepend-path LD_LIBRARY_PATH $prefix/bin
+prepend-path CMAKE_PREFIX_PATH $prefix
+
+# The binary installation of ParaView assumes that the host Linux system includes the xcb
+# libraries. The clusters do not include them in the base installation so we use them
+# from another full Qt installation - from qt/5.12.1/gnu-4.9.2
+
+setenv QT_XKB_CONFIG_ROOT /shared/ucl/apps/qt/5.12.1/gnu-4.9.2/support/lib
+prepend-path LD_LIBRARY_PATH /shared/ucl/apps/qt/5.12.1/gnu-4.9.2/support/lib
+

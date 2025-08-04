@@ -42,17 +42,17 @@ prepend-path	MANPATH		$prefix/$release/man
 if { [modulefunctions::isCluster Thomas]  } {
     setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
 } elseif { [modulefunctions::isCluster Michael] } {
-    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
+    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:,/shared/ucl/apps/NAG/kusari/nag_annual_2025-2026
 } elseif { [modulefunctions::isCluster Grace] } {
     setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
 } elseif { [modulefunctions::isCluster Myriad]  } {
-    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
+    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:,/shared/ucl/apps/NAG/kusari/nag_annual_2025-2026
 } elseif { [modulefunctions::isCluster Aristotle]  } {
-    setenv NAG_KUSARI_FILE lic-nag.ucl.ac.uk:    
+    setenv NAG_KUSARI_FILE lic-nag.ucl.ac.uk:,/shared/ucl/apps/NAG/kusari/nag_annual_2025-2026    
 } elseif { [modulefunctions::isCluster Young] } {
-    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
+    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:,/shared/ucl/apps/NAG/kusari/nag_annual_2025-2026
 } elseif { [modulefunctions::isCluster Kathleen] } {
-    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:
+    setenv NAG_KUSARI_FILE util01:,lic-nag.ucl.ac.uk:,/shared/ucl/apps/NAG/kusari/nag_annual_2025-2026
 } else {
         setenv NAG_KUSARI_FILE lm-server:,lic-nag.ucl.ac.uk:
 }

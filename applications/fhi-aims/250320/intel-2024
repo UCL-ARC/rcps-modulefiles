@@ -1,0 +1,28 @@
+#%Module -*- tcl -*-
+## module_made (v2)
+proc ModulesHelp { } {
+  puts stderr {FHI-aims is an all-electron electronic structure code based on numeric atom-centered orbitals.}
+}
+module-whatis {FHI-aims is an all-electron electronic structure code based on numeric atom-centered orbitals.}
+
+
+lappend auto_path /shared/ucl/apps/modulelibs/UsefulModuleFunctions
+package require modulefunctions 1.0
+
+modulefunctions::mustBeMemberToLoad ag-archpc-fhiaims
+conflict fhi-aims
+prereq gcc-libs/10.2.0
+prereq compilers/intel/2024.0.1
+prereq mpi/intel/2021.11/intel
+prereq cmake/3.21.1
+
+set prefix /shared/ucl/apps/fhi-aims/250320/intel-2024
+prepend-path CMAKE_PREFIX_PATH $prefix
+prepend-path PATH $prefix/bin
+prepend-path CPATH $prefix/include
+prepend-path INCLUDE_PATH $prefix/include
+prepend-path LIBRARY_PATH $prefix/lib
+prepend-path LD_RUN_PATH $prefix/lib
+prepend-path LD_LIBRARY_PATH $prefix/lib
+prepend-path PKG_CONFIG_PATH $prefix/lib/pkgconfig
+

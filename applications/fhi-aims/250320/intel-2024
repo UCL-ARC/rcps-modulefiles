@@ -14,7 +14,6 @@ conflict fhi-aims
 prereq gcc-libs/10.2.0
 prereq compilers/intel/2024.0.1
 prereq mpi/intel/2021.11/intel
-prereq cmake/3.21.1
 
 set prefix /shared/ucl/apps/fhi-aims/250320/intel-2024
 prepend-path CMAKE_PREFIX_PATH $prefix

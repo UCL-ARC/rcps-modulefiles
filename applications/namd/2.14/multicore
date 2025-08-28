@@ -1,0 +1,15 @@
+#%Module -*- tcl -*-
+## module_made (v2)
+proc ModulesHelp { } {
+  puts stderr {NAMD is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. This is NAMD's Linux-x86_64-multicore binary (no CUDA, no GPU support).}
+}
+module-whatis {NAMD is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. This is NAMD's Linux-x86_64-multicore binary (no CUDA, no GPU support).}
+
+conflict namd
+prereq gcc-libs
+
+set prefix /shared/ucl/apps/namd/2.14-binary
+
+prepend-path PATH /shared/ucl/apps/namd/2.14-binary/NAMD_2.14_Linux-x86_64-multicore
+
+

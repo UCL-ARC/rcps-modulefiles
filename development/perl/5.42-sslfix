@@ -1,0 +1,27 @@
+#%Module -*- tcl -*-
+#
+# Perl 5.42.0
+#
+#                                                      H.K. 10th June 2015
+
+proc ModulesHelp { } {
+
+    puts stderr "This module adds Perl 5.42.0 to your environment."
+    puts stderr ""
+}
+
+module-whatis "This module adds adds Perl 5.42.0 to your environment."
+
+prereq gcc-libs/10.2.0
+prereq openssl/1.1.1u
+
+conflict perl
+
+set root 			/shared/ucl/apps/perl/perl-5.42-sslfix
+set moduleroot			$root/lib/site_perl
+prepend-path PATH      		$root/bin
+prepend-path PERL5LIB 		$root/lib
+prepend-path PERL5LIB		$moduleroot
+prepend-path PERL5LIB		$moduleroot/5.42.0
+
+prepend-path CMAKE_PREFIX_PATH $root

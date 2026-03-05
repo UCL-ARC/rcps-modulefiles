@@ -1,0 +1,21 @@
+#%Module -*- tcl -*-
+## module_made (v2)
+proc ModulesHelp { } {
+  puts stderr {This is a module with no description string.}
+}
+module-whatis {This is a module with no description string.}
+
+prereq gcc-libs/10.2.0
+prereq python/3.6.3
+prereq openblas/0.2.14/gnu-4.9.2
+prereq python3/3.6
+prereq eigen/3.2.5/gnu-4.9.2
+prereq fftw/3.3.6-pl2/gnu-4.9.2
+
+set prefix /shared/ucl/apps/mrtrix/3.0.8/gnu-4.9.2
+prepend-path CMAKE_PREFIX_PATH $prefix
+prepend-path PATH $prefix/bin
+prepend-path LIBRARY_PATH $prefix/lib
+prepend-path LD_RUN_PATH $prefix/lib
+prepend-path LD_LIBRARY_PATH $prefix/lib
+

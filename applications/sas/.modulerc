@@ -1,0 +1,10 @@
+#%Module
+
+set msg {SAS 9.4M0 is now unavailable, for technical reasons.
+
+This version is very old, but if you need it, please contact
+ the support team and we'll try to get it working.
+}
+
+module-hide             sas/9.4/64
+module-forbid --message "$msg" sas/9.4/64
